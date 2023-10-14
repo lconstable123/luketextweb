@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>datafeed</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .titlebox {
+     padding: 5px;
+      display: grid;  
+      /* using display grid and template-colums/rows in the container to set a grid of the items*/
+      gap: 1rem;
+      grid-template-columns: 2fr 1fr ;    /* this is a first colum twice as big as the second*/
+      
+    }
+
+    .container{
+        padding: 10px;
+        /*setting the container as display flex, wrap and align cneter makes the itmes in the container responsive*/
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        gap:5px
+    }
+
+    .item {
+/*the flex basis is the defaul size of each box.  flex grow and shrink enables responsibe squish*/
+        flex-basis:200px;
+        flex-shrink: 1;
+
+      font-size: 1rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      text-align: center;
+      padding: 30px;
+
+    }
+.logo{
+  background-color: rgb(108, 141, 141);
+}
+.info{
+    grid-column: span 2;
+    /* this info box spans two grid colums*/
+}
+.url{
+    grid-column: span 2;
+    /* this info box spans two grid colums*/
+} 
+  </style>
+
+</head>
+
+<body>
+<div class="titlebox">
+    <div class="item logo">datafeed</div>
+    <div class="item timeanddata">time<br>date</div>
+
+</div>
+
+  <div class="container">
+    
+    <div class="item info">info info info info info info info</div>
+    <div class="item url">this is the URL:<br> <a href="www.google.com">Linky good times</a></div>
+    <div class="item links">other links<br>more lines<br>even more links</div>
+    
+  </div>
+</body>
+
+</html>
